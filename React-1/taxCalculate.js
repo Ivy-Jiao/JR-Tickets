@@ -1,3 +1,20 @@
+
+const brackets1 = [
+        { limit: 18200, rate: 0 },
+        { limit: 45000, rate: 0.19 },
+        { limit: 120000, rate: 0.325 },
+        { limit: 180000, rate: 0.37 },
+        { limit: Infinity, rate: 0.45 }
+    ];
+
+const brackets2 = [
+        { limit: 19100, rate: 0 },
+        { limit: 45200, rate: 0.18 },
+        { limit: 120000, rate: 0.33 },
+        { limit: 180000, rate: 0.37 },
+        { limit: Infinity, rate: 0.45 }
+    ];
+    
 function calculateTax1(income) {
     const rates = [0, 0.19, 0.325, 0.37, 0.45];
     const brackets = [18200, 45000, 120000, 180000];
@@ -29,15 +46,8 @@ function calculateTax1(income) {
 }
 
 // AI
-function calculateTax2(income) {
-    const brackets = [
-        { limit: 18200, rate: 0 },
-        { limit: 45000, rate: 0.19 },
-        { limit: 120000, rate: 0.325 },
-        { limit: 180000, rate: 0.37 },
-        { limit: Infinity, rate: 0.45 }
-    ];
-
+function calculateTax2(brackets, income) {
+    
     let tax = 0;
     let previousLimit = 0;
 
@@ -55,4 +65,6 @@ function calculateTax2(income) {
 const income = 31900;
 console.log(`Income: $${income}`);
 console.log(`Tax1: $${calculateTax1(income)}`);
-console.log(`Tax2: $${calculateTax2(income)}`);
+console.log(`Tax2: $${calculateTax2(brackets1, income)}`);
+console.log(`Tax2: $${calculateTax2(brackets2, income)}`);
+
