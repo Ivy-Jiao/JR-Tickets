@@ -1,7 +1,11 @@
+import Card from "../../components/Card";
+
 const Disclaimer = () => (
-    <div className="card">
+    <Card content={
+    <div>
         <p><span style={{ fontWeight: "bold" }}>Note:</span> This calculator provides estimates based on individual tax rates for residents. It does not include Medicare Levy, HELP/HECS repayments, or other offsets and deductions. Please consult with a tax professional or the ATO for accurate tax advice.</p>
     </div>
+    }/>
 );
 
 export default Disclaimer;

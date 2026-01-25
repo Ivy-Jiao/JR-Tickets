@@ -1,0 +1,28 @@
+.tax-title{
+}
+
+.tax-table-wrapper{
+    background-color: #ffffff;
+}
+
+.tax-table{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.tax-table th,
+.tax-table td{
+    width: 50%;
+    padding: 8px 16px;
+}
+
+.tax-table tr > :first-child{
+    text-align: left;
+    font-weight: 500;
+}
+
+.tax-table tr > :last-child{
+    text-align: right;
+    font-weight: 500;
+}

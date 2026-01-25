@@ -8,29 +8,6 @@ body {
   background-color: oklch(97% .014 254.604);
 }
 
-/* reusable Card styles */
-.card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 24px;
-  margin: 10px 15px;
-  transition: box-shadow 0.3s ease;
-}
 
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-@media (prefers-color-scheme: dark) {
-  .card {
-    background-color: #1e1e1e;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
-
-  .card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  }
-}
 
 @media (prefers-color-scheme: light) {}
