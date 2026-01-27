@@ -1,20 +1,25 @@
 .tax-title{
+    margin: 0 0 16px;
+    color: #111827;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .tax-table-wrapper{
-    background-color: #ffffff;
+    overflow: auto;
 }
 
 .tax-table{
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
+    font-size: 14px;
 }
 
 .tax-table th,
-.tax-table td{
+.tax-table td{  
     width: 50%;
-    padding: 8px 16px;
+    padding: 10px 16px;
 }
 
 .tax-table tr > :first-child{
@@ -25,4 +30,13 @@
 .tax-table tr > :last-child{
     text-align: right;
     font-weight: 500;
+}
+
+.tax-table thead th {
+    border-bottom: 2px solid #e5e7eb;
+    color:#374151;
+}
+
+.tax-table tr {
+    border-bottom: 1px solid #e5e7eb;
 }

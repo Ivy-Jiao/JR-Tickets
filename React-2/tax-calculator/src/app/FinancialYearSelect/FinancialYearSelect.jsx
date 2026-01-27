@@ -4,10 +4,12 @@ import "./FinancialYearSelect.css"
 const FinancialYearSelect = () => (
     <Card content={
         <div>
-        <p className="label">Select Financial Year:</p>
-        <div className="financial-years">
-            <button>FY10-19</button>
-            <button>FY20-26</button>
+        <p className="financial-year-label">Select Financial Year:</p>
+        <div className="financial-year-buttons">
+            <button className="financial-year-button is active" type="button">
+                FY2023-24</button>
+            <button className="financial-year-button" type="button">
+                FY2024-25</button>
         </div>
     </div>
     }/>

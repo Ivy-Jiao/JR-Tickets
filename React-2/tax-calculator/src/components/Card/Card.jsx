@@ -6,4 +6,4 @@ const Card = (obj) => (
     </div>
 );
 
-export default Card;
+export default Card; 

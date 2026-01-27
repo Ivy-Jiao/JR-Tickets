@@ -1,6 +1,7 @@
 import Card from "../../components/Card";
 import Form from "./components/Form/Form";
 import Result from "./components/Result";
+import "./Calculator.css"
 
 const Calculator = () => (
     <Card content={<div >
