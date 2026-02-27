@@ -28,13 +28,17 @@ app.use(express.json());
 app.use(m2);
 app.use(m1);
 
-
 //app.{method}(pathname, route handler)
 // app.get('/', (req, res) => {
 //   res.send('hello from express');
 // });
 
-app.get('/movies/:id/:name', m3, (req, res) => {
+
+//mini app -> moviesApp => movieRouter
+const movieRouter = express.Router();
+app.use('/movies', movieRouter);
+
+movieRouter.get('/:id/:name', m3, (req, res) => {
   const {title, rating} = req.query;
 
   res.send({
@@ -44,8 +48,13 @@ app.get('/movies/:id/:name', m3, (req, res) => {
       rating,
     },
     number: 123,
-  });
+  })
 
+});
+
+movieRouter.post('/', (req, res) => {
+  // res.send({body: req.body});
+  res.status(201).json({body: req.body});
 });
 
 //middleware
@@ -55,11 +64,14 @@ app.get('/middleware', m4, (req, res)=>{
   });
 });
 
-app.post('/movies', (req, res) => {
-  // res.send({body: req.body});
-  res.status(201).json({body: req.body});
+app.use((error, req, res, next) => {
+  console.log(error);
+  res.status(500).json({
+    error: 'something went wrong',
+  })
 });
 
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
 });
+
