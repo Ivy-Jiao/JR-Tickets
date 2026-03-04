@@ -69,7 +69,7 @@ const getMovieById = (req,res,next) =>{
 const updateMovieById = (req,res,next) =>{
   const { id: movieId } = req.params;
   const { title, description, types } = req.body; //add app.use(express.json()); in index.js for project
-  
+
   const movie = movies.find(m => m.id ===  Number(movieId));
   if (!movie) {
     return res.status(404).json({
